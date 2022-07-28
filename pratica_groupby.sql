@@ -26,7 +26,11 @@ GROUP BY u.id
 
 ----------------------------------------4
 
-
+SELECT MAX(jobs.salary) as maximumSalary, 
+r.name as "role"
+FROM jobs
+JOIN roles r ON r.id = jobs."roleId"
+GROUP BY r.name
 
 
 
